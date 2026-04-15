@@ -1,0 +1,22 @@
+:root {
+  --purple: #a855f7;
+  --muted: #241f2e;
+  --green: #10b981;
+  --orange: #f59e0b;
+  --pink: #ec4899;
+  --text: #f5f3fa;
+  --secondary-text: #9a94a8;
+  --border: #322d3d;
+  --card-bg: #1a1720;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: inter;
+  overscroll-behavior: none;
+}
