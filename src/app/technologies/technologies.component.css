@@ -1,0 +1,84 @@
+section {
+  height: 100vh;
+  margin-left: 15%;
+  padding: 32px 16px;
+  color: white;
+}
+
+.header {
+  margin-bottom: 32px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header h2 {
+  font-size: 24px;
+}
+
+.header p {
+  margin-top: 4px;
+  font-size: 16px;
+  color: var(--secondary-text);
+}
+
+.filters {
+  margin-bottom: 24px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.filters select {
+  width: 180px;
+  padding: 8px 12px;
+  background-color: #0f0d14;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  color: var(--text);
+}
+
+.filters p {
+  font-size: 14px;
+  color: var(--secondary-text);
+}
+
+.tech-container {
+  width: 100%;
+  min-height: 200px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  border: 1px dashed var(--border);
+  border-radius: 16px;
+}
+
+.tech-container p {
+  color: var(--secondary-text);
+}
+
+.add-button {
+  padding: 8px 12px;
+  background-color: var(--purple);
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  color: var(--text);
+  cursor: pointer;
+}
+
+.add-button i {
+  margin-top: 2px;
+  margin-right: 12px;
+}
+
+.tech-list {
+  width: 100%;
+  margin-top: 32px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}

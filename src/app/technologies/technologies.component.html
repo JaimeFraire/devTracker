@@ -1,0 +1,49 @@
+<!-- @if (isAddingTechnology) {
+<app-new-technology (cancel)="onCancelAddTechnology()" />
+} -->
+
+<section>
+  <div class="header">
+    <div>
+      <h2>Technologies</h2>
+      <p>Manage the technologies you are learning and working with.</p>
+    </div>
+    <div>
+      @if (filteredTech.length !== 0) {
+      <button type="button" class="add-button" (click)="onStartAddTechnology()">
+        <i class="fa-solid fa-plus"></i> Add Technology
+      </button>
+      }
+    </div>
+  </div>
+
+  <div class="filters">
+    <form>
+      <!-- <select name="category" [(ngModel)]="selectedCategory"> -->
+      <select name="category">
+        <option value="">All Categories</option>
+        <option value="Frontend">Frontend</option>
+        <option value="Backend">Backend</option>
+        <option value="Mobile">Mobile</option>
+      </select>
+    </form>
+
+    <p>{{ filteredTech.length }} technolog{{ suffix }}</p>
+  </div>
+
+  @if (filteredTech.length === 0) {
+  <div class="tech-container">
+    <p>No technologies yet. Add your first one!</p>
+    <button type="button" class="add-button" (click)="onStartAddTechnology()">
+      <i class="fa-solid fa-plus"></i> Add Technology
+    </button>
+  </div>
+  } @else {
+  <div class="tech-list">
+    @for (tech of filteredTech; track $index) {
+    <!-- <app-technology [tech]="tech" /> -->
+    <app-technology />
+    }
+  </div>
+  }
+</section>
