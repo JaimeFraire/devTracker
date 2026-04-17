@@ -1,0 +1,52 @@
+<div class="backdrop" [class.closing]="isClosing" (click)="onCancel()"></div>
+<dialog open [class.closing]="isClosing">
+  <div>
+    <h2>Add Task</h2>
+    <button (click)="onCancel()"><i class="fa-solid fa-xmark"></i></button>
+  </div>
+
+  <form (ngSubmit)="onSubmit()" #form="ngForm">
+    <p>
+      <label for="name">Name</label>
+      <input
+        type="text"
+        id="name"
+        name="name"
+        placeholder="e.g., React, Python, PostgreSQL"
+        [(ngModel)]="enteredName"
+        required=""
+      />
+      @if (form.controls['name']?.invalid && form.controls['name']?.touched) {
+      <span class="error">Name is required</span>
+      }
+    </p>
+
+    <p>
+      <label for="category">Category</label>
+      <select name="category" [(ngModel)]="enteredCategory">
+        <option value="Frontend">Frontend</option>
+        <option value="Backend">Backend</option>
+        <option value="Mobile">Mobile</option>
+      </select>
+    </p>
+
+    <p>
+      <label for="level">Level</label>
+      <select name="level" [(ngModel)]="enteredLevel">
+        <option value="Learning">Learning</option>
+        <option value="Intermediate">Intermediate</option>
+        <option value="Advanced">Advanced</option>
+      </select>
+    </p>
+
+    <p>
+      <label for="color">Color</label>
+      <input type="color" id="color" name="color" [(ngModel)]="enteredColor" />
+    </p>
+
+    <p class="actions">
+      <button type="button" (click)="onCancel()">Cancel</button>
+      <button type="submit" [disabled]="form.invalid">Add Technology</button>
+    </p>
+  </form>
+</dialog>

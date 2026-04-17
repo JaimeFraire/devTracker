@@ -6,11 +6,12 @@ import { TechnologyComponent } from './technology/technology.component';
 
 // Service
 import { TechnologiesService } from './technologies.service';
+import { NewTechnologyComponent } from './new-technology/new-technology.component';
 
 @Component({
   selector: 'app-technologies',
   standalone: true,
-  imports: [TechnologyComponent, FormsModule],
+  imports: [TechnologyComponent, NewTechnologyComponent, FormsModule],
   templateUrl: './technologies.component.html',
   styleUrl: './technologies.component.css',
 })
