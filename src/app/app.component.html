@@ -1,1 +1,15 @@
-
+<app-navbar
+  [activeSection]="activeSection"
+  (newSection)="activeSection = $event"
+/>
+<main>
+  <!-- @switch (activeSection) { @case ('dashboard') {
+  <app-dashboard />
+  } @case ('technologies') {
+  <app-technologies />
+  } @case ('sessions') {
+  <app-sessions />
+  } @case ('projects') {
+  <app-projects />
+  } } -->
+</main>
