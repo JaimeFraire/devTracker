@@ -15,7 +15,9 @@
 i {
   width: 32px;
   height: 32px;
-  padding-top: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   border-radius: 8px;
   opacity: 0;
   cursor: pointer;

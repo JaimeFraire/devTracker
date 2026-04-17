@@ -1,7 +1,7 @@
 <div class="card" [style.borderTop]="'5px solid ' + technology.color">
-  <!-- @if (isModalOpen) {
-  <app-tech-modal (delete)="onDelete()" (close)="onCloseModal()" />
-  } -->
+  @if (isModalOpen) {
+  <app-technology-modal (delete)="onDelete()" (close)="onCloseModal()" />
+  }
   <div class="description-container">
     <div class="data-container">
       <p class="tech-letter" [style.backgroundColor]="technology.color">

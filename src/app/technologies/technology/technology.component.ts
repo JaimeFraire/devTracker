@@ -5,11 +5,12 @@ import { TechnologiesService } from '../technologies.service';
 
 // Model
 import { Technology } from './technology.model';
+import { TechnologyModalComponent } from '../../technology-modal/technology-modal.component';
 
 @Component({
   selector: 'app-technology',
   standalone: true,
-  imports: [],
+  imports: [TechnologyModalComponent],
   templateUrl: './technology.component.html',
   styleUrl: './technology.component.css',
 })
