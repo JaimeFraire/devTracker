@@ -19,8 +19,7 @@
 
   <div class="filters">
     <form>
-      <!-- <select name="category" [(ngModel)]="selectedCategory"> -->
-      <select name="category">
+      <select name="category" [(ngModel)]="selectedCategory">
         <option value="">All Categories</option>
         <option value="Frontend">Frontend</option>
         <option value="Backend">Backend</option>
@@ -40,9 +39,8 @@
   </div>
   } @else {
   <div class="tech-list">
-    @for (tech of filteredTech; track $index) {
-    <!-- <app-technology [tech]="tech" /> -->
-    <app-technology />
+    @for (technology of filteredTech; track $index) {
+    <app-technology [technology]="technology" />
     }
   </div>
   }

@@ -1,1 +1,21 @@
-
+<div class="card" [style.borderTop]="'5px solid ' + technology.color">
+  <!-- @if (isModalOpen) {
+  <app-tech-modal (delete)="onDelete()" (close)="onCloseModal()" />
+  } -->
+  <div class="description-container">
+    <div class="data-container">
+      <p class="tech-letter" [style.backgroundColor]="technology.color">
+        {{ shortedName }}
+      </p>
+      <div>
+        <p class="tech-name">{{ technology.name }}</p>
+        <p class="tech-category">{{ technology.category }}</p>
+      </div>
+    </div>
+    <i class="fa-solid fa-ellipsis-vertical" (click)="onOpenModal()"></i>
+  </div>
+  <div class="info-container">
+    <p>{{ technology.level }}</p>
+    <p>{{ technology.studiedFor }}m</p>
+  </div>
+</div>

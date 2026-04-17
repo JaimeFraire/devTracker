@@ -1,10 +1,13 @@
 import { Injectable } from '@angular/core';
+
+// Model
 import { Technology, NewTechnology } from './technology/technology.model';
 
 @Injectable({ providedIn: 'root' })
 export class TechnologiesService {
   private technologies: Technology[] = [];
 
+  // Saving in localStorage
   constructor() {
     const technologies = localStorage.getItem('technologies');
 
@@ -17,7 +20,7 @@ export class TechnologiesService {
     if (!selectedCategory) return this.technologies;
 
     return this.technologies.filter(
-      (tech) => tech.category === selectedCategory
+      (technology) => technology.category === selectedCategory
     );
   }
 

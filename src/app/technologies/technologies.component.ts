@@ -1,11 +1,16 @@
 import { Component } from '@angular/core';
-import { TechnologiesService } from './technologies.service';
+import { FormsModule } from '@angular/forms';
+
+// Components
 import { TechnologyComponent } from './technology/technology.component';
+
+// Service
+import { TechnologiesService } from './technologies.service';
 
 @Component({
   selector: 'app-technologies',
   standalone: true,
-  imports: [TechnologyComponent],
+  imports: [TechnologyComponent, FormsModule],
   templateUrl: './technologies.component.html',
   styleUrl: './technologies.component.css',
 })
@@ -27,6 +32,7 @@ export class TechnologiesComponent {
     this.isAddingTechnology = false;
   }
 
+  // Suffix for text in filters
   get suffix() {
     return this.filteredTech.length === 1 ? 'y' : 'ies';
   }

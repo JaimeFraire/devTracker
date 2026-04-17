@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 
+// Components
 import { NavbarComponent } from './navbar/navbar.component';
 import { TechnologiesComponent } from './technologies/technologies.component';
 
