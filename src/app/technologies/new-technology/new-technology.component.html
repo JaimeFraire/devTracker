@@ -16,9 +16,6 @@
         [(ngModel)]="enteredName"
         required=""
       />
-      @if (form.controls['name']?.invalid && form.controls['name']?.touched) {
-      <span class="error">Name is required</span>
-      }
     </p>
 
     <p>
