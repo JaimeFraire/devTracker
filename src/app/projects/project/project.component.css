@@ -1,0 +1,69 @@
+.card {
+  min-height: 235px;
+  padding: 24px;
+  background-color: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+}
+
+.info-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.data-container {
+  margin-bottom: 48px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.folder {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--muted);
+  border-radius: 8px;
+  color: var(--purple);
+}
+
+.project-name {
+  margin-bottom: 4px;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.project-date {
+  font-size: 12px;
+  color: var(--secondary-text);
+}
+
+.project-description {
+  font-size: 14px;
+  color: var(--secondary-text);
+}
+
+hr {
+  height: 1.1px;
+  margin: 20px 0;
+  top: 20px;
+  border: 0;
+  background-color: var(--border);
+}
+
+.status-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.status-container p:first-of-type {
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.status-container p:last-of-type {
+  font-size: 14px;
+  font-weight: 400;
+}

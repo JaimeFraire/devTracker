@@ -1,0 +1,91 @@
+<div class="backdrop" [class.closing]="isClosing" (click)="onCancel()"></div>
+<dialog open [class.closing]="isClosing">
+  <div class="header">
+    <h2>Create Project</h2>
+    <button (click)="onCancel()"><i class="fa-solid fa-xmark"></i></button>
+  </div>
+
+  <form (ngSubmit)="onAddProject()" #form="ngForm">
+    <p>
+      <label for="name">Project Name</label>
+      <input
+        type="text"
+        id="name"
+        name="name"
+        placeholder="e.g., Personal Portfolio"
+        [(ngModel)]="enteredTitle"
+        required=""
+      />
+      @if (form.controls['name']?.invalid && form.controls['name']?.touched) {
+      <span class="error">Project name is required</span>
+      }
+    </p>
+
+    <p>
+      <label for="description">Description</label>
+      <textarea
+        name="description"
+        id="description"
+        cols="30"
+        rows="3"
+        placeholder="What is this project about?"
+        [(ngModel)]="enteredDescription"
+      ></textarea>
+    </p>
+
+    <div class="two-cols">
+      <p>
+        <label for="status">Status</label>
+        <select name="status" [(ngModel)]="enteredStatus">
+          <option value="Planning">Planning</option>
+          <option value="In Progress">In Progress</option>
+          <option value="Completed">Completed</option>
+          <option value="Paused">Paused</option>
+        </select>
+      </p>
+
+      <p>
+        <label for="date">Start Date</label>
+        <input type="date" [(ngModel)]="enteredDate" />
+      </p>
+    </div>
+
+    <div>
+      <label for="tech">Technologies</label>
+      @if (techList.length === 0) {
+      <p class="message">
+        No technologies added yet. Add some in the Technologies page
+      </p>
+      } @else {
+      <form class="tech-container">
+        @for (item of techList; track $index) {
+        <div>
+          <input
+            type="checkbox"
+            [value]="item.name"
+            (change)="onTechChange($event, item.name)"
+          />
+          <label
+            ><span [style.color]="item.color">•</span>{{ item.name }}</label
+          >
+        </div>
+        }
+      </form>
+      }
+    </div>
+
+    <p>
+      <label for="url">Repository URL (optional)</label>
+      <input
+        type="url"
+        placeholder="https://github.com/username/repo"
+        [(ngModel)]="enteredUrl"
+      />
+    </p>
+
+    <p class="actions">
+      <button type="button" (click)="onCancel()">Cancel</button>
+      <button type="submit" [disabled]="form.invalid">Create Project</button>
+    </p>
+  </form>
+</dialog>

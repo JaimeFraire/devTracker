@@ -1,0 +1,47 @@
+@if (isAddingProject) {
+<app-new-project (cancel)="onCancelAddProject()" />
+}
+
+<section>
+  <div class="header">
+    <div>
+      <h2>Projects</h2>
+      <p>Manage your coding projects and track progress.</p>
+    </div>
+
+    <div>
+      @if (projectsList.length !== 0) {
+      <button type="button" class="add-button" (click)="onStartAddProject()">
+        <i class="fa-solid fa-plus"></i> Add Project
+      </button>
+      }
+    </div>
+  </div>
+
+  <div class="filters">
+    <select>
+      <option>All Status</option>
+      <option>Planning</option>
+      <option>In Progress</option>
+      <option>Completed</option>
+      <option>Paused</option>
+    </select>
+
+    <p>0 projects</p>
+  </div>
+
+  @if (projectsList.length === 0) {
+  <div class="project-container">
+    <p>No projects yet. Create your first one!</p>
+    <button type="button" class="add-button" (click)="onStartAddProject()">
+      <i class="fa-solid fa-plus"></i> Create Project
+    </button>
+  </div>
+  } @else {
+  <div class="projects-list">
+    @for (item of projectsList; track $index) {
+    <app-project [project]="item" />
+    }
+  </div>
+  }
+</section>

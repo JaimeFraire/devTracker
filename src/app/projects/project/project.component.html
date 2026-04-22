@@ -1,0 +1,22 @@
+<div class="card">
+  <div class="info-container">
+    <div class="data-container">
+      <i class="fa-regular fa-folder folder"></i>
+      <div>
+        <p class="project-name">{{ project.title }}</p>
+        <p class="project-date">Started {{ project.date }}</p>
+      </div>
+    </div>
+    <i class="fa-solid fa-ellipsis-vertical"></i>
+  </div>
+
+  <p class="project-description">{{ project.description }}</p>
+  <p><span>•</span> Angular</p>
+
+  <hr />
+
+  <div class="status-container">
+    <p>{{ project.status }}</p>
+    <p>{{ project.time }}m</p>
+  </div>
+</div>
