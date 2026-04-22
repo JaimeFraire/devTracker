@@ -5,7 +5,7 @@ import { TechnologiesService } from '../technologies.service';
 
 // Model
 import { Technology } from './technology.model';
-import { TechnologyModalComponent } from '../../technology-modal/technology-modal.component';
+import { TechnologyModalComponent } from '../technology-modal/technology-modal.component';
 
 @Component({
   selector: 'app-technology',

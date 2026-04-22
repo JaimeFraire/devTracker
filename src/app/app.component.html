@@ -3,17 +3,14 @@
   (newSection)="activeSection = $event"
 />
 <main>
-  <!-- @switch (activeSection) { @case ('dashboard') {
+  @switch (activeSection) { @case ('dashboard') {
   <app-dashboard />
   } @case ('technologies') {
   <app-technologies />
-  } @case ('sessions') {
+  } }
+  <!-- @case ('sessions') {
   <app-sessions />
   } @case ('projects') {
   <app-projects />
   } } -->
-
-  @switch (activeSection) { @case ('technologies') {
-  <app-technologies />
-  } }
 </main>

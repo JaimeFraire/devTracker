@@ -1,0 +1,111 @@
+section {
+  margin-left: 15%;
+  padding: 32px 16px;
+  color: white;
+}
+
+.header {
+  margin-bottom: 32px;
+}
+
+.header h2 {
+  font-size: 24px;
+}
+
+.header p {
+  margin-top: 4px;
+  font-size: 16px;
+  color: var(--secondary-text);
+}
+
+.card-container {
+  width: 100%;
+  display: flex;
+  gap: 16px;
+}
+
+.card {
+  width: 100%;
+  padding: 48px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+}
+
+.card-title {
+  font-size: 14px;
+  color: var(--secondary-text);
+}
+
+.card-number {
+  font-size: 30px;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.card-number span {
+  margin-left: 4px;
+  font-size: 18px;
+  font-weight: 400;
+  color: var(--secondary-text);
+}
+
+.card i {
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  font-size: 20px;
+  background-color: var(--muted);
+}
+
+.clock {
+  color: var(--purple);
+}
+
+.calendar {
+  color: var(--green);
+}
+
+.folder {
+  color: var(--orange);
+}
+
+.flame {
+  color: var(--pink);
+}
+
+.two-cols {
+  display: flex;
+  gap: 16px;
+}
+
+.two-cols {
+  margin: 24px 0;
+}
+
+.data-card {
+  width: 100%;
+  padding: 48px 24px;
+  background-color: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+}
+
+.data-card-title {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.data-container {
+  height: 240px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--secondary-text);
+}

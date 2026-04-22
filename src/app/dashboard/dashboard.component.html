@@ -1,0 +1,60 @@
+<section>
+  <div class="header">
+    <h2>Dashboard</h2>
+    <p>Overview of your developer progress</p>
+  </div>
+
+  <div class="card-container">
+    <div class="card">
+      <div>
+        <p class="card-title">Total Hours</p>
+        <p class="card-number">{{ totalHours }}<span>h</span></p>
+      </div>
+      <i class="fa-regular fa-clock clock"></i>
+    </div>
+    <div class="card">
+      <div>
+        <p class="card-title">This Week</p>
+        <p class="card-number">{{ totalHoursPerWeek }}<span>h</span></p>
+      </div>
+      <i class="fa-regular fa-calendar calendar"></i>
+    </div>
+    <div class="card">
+      <div>
+        <p class="card-title">Active Projects</p>
+        <p class="card-number">{{ activeProjects }}</p>
+      </div>
+      <i class="fa-regular fa-folder folder"></i>
+    </div>
+    <div class="card">
+      <div>
+        <p class="card-title">Day streak</p>
+        <p class="card-number">{{ streakDays }}</p>
+      </div>
+      <i class="fa-solid fa-fire-flame-curved flame"></i>
+    </div>
+  </div>
+
+  <div class="two-cols">
+    <div class="data-card">
+      <p class="data-card-title">Weekly Activity</p>
+      <div class="data-container">
+        <p>No activity this week. Start a session to track your progress!</p>
+      </div>
+    </div>
+
+    <div class="data-card">
+      <p class="data-card-title">Technology Distribution</p>
+      <div class="data-container">
+        <p>Add technologies and start logging sessions to see distribution</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="data-card">
+    <p class="data-card-title">Recent Sessions</p>
+    <div class="data-container">
+      <p>No sessions yet. Start tracking your learning!</p>
+    </div>
+  </div>
+</section>
