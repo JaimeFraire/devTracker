@@ -5,6 +5,14 @@ import { NewProject, Project } from './project/project.model';
 export class ProjectsService {
   private projects: Project[] = [];
 
+  constructor() {
+    const projects = localStorage.getItem('projects');
+
+    if (projects) {
+      this.projects = JSON.parse(projects);
+    }
+  }
+
   getProjects() {
     return this.projects;
   }
@@ -20,5 +28,10 @@ export class ProjectsService {
       status: project.status,
       time: 0,
     });
+    this.saveProjects();
+  }
+
+  private saveProjects() {
+    localStorage.setItem('projects', JSON.stringify(this.projects));
   }
 }
