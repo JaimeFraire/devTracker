@@ -31,6 +31,11 @@ export class ProjectsService {
     this.saveProjects();
   }
 
+  deleteProject(projectId: string) {
+    this.projects = this.projects.filter((project) => project.id !== projectId);
+    this.saveProjects();
+  }
+
   private saveProjects() {
     localStorage.setItem('projects', JSON.stringify(this.projects));
   }

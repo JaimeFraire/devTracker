@@ -4,6 +4,7 @@
   background-color: var(--card-bg);
   border: 1px solid var(--border);
   border-radius: 8px;
+  position: relative;
 }
 
 .info-container {
@@ -38,6 +39,26 @@
 .project-date {
   font-size: 12px;
   color: var(--secondary-text);
+}
+
+.menu {
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  opacity: 0;
+  cursor: pointer;
+  transition: opacity 0.1s ease;
+}
+
+.card:hover .info-container > i {
+  opacity: 1;
+}
+
+.menu:hover {
+  background-color: var(--purple);
 }
 
 .project-description {

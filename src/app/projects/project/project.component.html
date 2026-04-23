@@ -1,4 +1,7 @@
 <div class="card">
+  @if (isModalOpen) {
+  <app-project-modal [projectId]="project.id" (close)="onCloseModal()" />
+  }
   <div class="info-container">
     <div class="data-container">
       <i class="fa-regular fa-folder folder"></i>
@@ -9,7 +12,7 @@
         </p>
       </div>
     </div>
-    <i class="fa-solid fa-ellipsis-vertical"></i>
+    <i class="fa-solid fa-ellipsis-vertical menu" (click)="onOpenModal()"></i>
   </div>
 
   <p class="project-description">{{ project.description }}</p>

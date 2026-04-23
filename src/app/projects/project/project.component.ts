@@ -4,15 +4,19 @@ import { DatePipe } from '@angular/common';
 // Model
 import { Project } from './project.model';
 
+// Components
+import { ProjectModalComponent } from '../project-modal/project-modal.component';
+
 @Component({
   selector: 'app-project',
   standalone: true,
-  imports: [DatePipe],
+  imports: [ProjectModalComponent, DatePipe],
   templateUrl: './project.component.html',
   styleUrl: './project.component.css',
 })
 export class ProjectComponent {
   @Input({ required: true }) project!: Project;
+  isModalOpen = false;
 
   hexToRgba(hex: string, alpha: number) {
     const r = parseInt(hex.slice(1, 3), 16);
@@ -20,5 +24,13 @@ export class ProjectComponent {
     const b = parseInt(hex.slice(5, 7), 16);
 
     return `rgba(${r}, ${g}, ${b}, ${alpha})`;
+  }
+
+  onOpenModal() {
+    this.isModalOpen = true;
+  }
+
+  onCloseModal() {
+    this.isModalOpen = false;
   }
 }
