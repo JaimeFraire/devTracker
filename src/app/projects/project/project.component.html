@@ -4,14 +4,20 @@
       <i class="fa-regular fa-folder folder"></i>
       <div>
         <p class="project-name">{{ project.title }}</p>
-        <p class="project-date">Started {{ project.date }}</p>
+        <p class="project-date">
+          Started {{ project.date | date : "longDate" }}
+        </p>
       </div>
     </div>
     <i class="fa-solid fa-ellipsis-vertical"></i>
   </div>
 
   <p class="project-description">{{ project.description }}</p>
-  <p><span>•</span> Angular</p>
+  <div class="tech-container">
+    @for (technology of project.technologies; track $index) {
+    <p><span>•</span> {{ technology.toLowerCase() }}</p>
+    }
+  </div>
 
   <hr />
 

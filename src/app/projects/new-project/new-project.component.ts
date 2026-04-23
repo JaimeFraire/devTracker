@@ -55,6 +55,7 @@ export class NewProjectComponent {
       url: this.enteredUrl,
     });
     this.onCancel();
+    console.log(this.projectsService.getProjects());
   }
 
   get techList() {

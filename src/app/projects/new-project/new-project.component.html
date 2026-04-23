@@ -16,9 +16,6 @@
         [(ngModel)]="enteredTitle"
         required=""
       />
-      @if (form.controls['name']?.invalid && form.controls['name']?.touched) {
-      <span class="error">Project name is required</span>
-      }
     </p>
 
     <p>
@@ -26,6 +23,7 @@
       <textarea
         name="description"
         id="description"
+        name="description"
         cols="30"
         rows="3"
         placeholder="What is this project about?"
@@ -46,7 +44,7 @@
 
       <p>
         <label for="date">Start Date</label>
-        <input type="date" [(ngModel)]="enteredDate" />
+        <input type="date" name="date" [(ngModel)]="enteredDate" />
       </p>
     </div>
 
@@ -78,6 +76,7 @@
       <label for="url">Repository URL (optional)</label>
       <input
         type="url"
+        name="url"
         placeholder="https://github.com/username/repo"
         [(ngModel)]="enteredUrl"
       />

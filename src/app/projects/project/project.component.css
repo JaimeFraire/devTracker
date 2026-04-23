@@ -45,6 +45,16 @@
   color: var(--secondary-text);
 }
 
+.tech-container {
+  display: flex;
+  gap: 8px;
+}
+
+.tech-container p {
+  font-size: 12px;
+  font-weight: 600;
+}
+
 hr {
   height: 1.1px;
   margin: 20px 0;
