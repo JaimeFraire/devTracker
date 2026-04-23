@@ -15,7 +15,12 @@
   <p class="project-description">{{ project.description }}</p>
   <div class="tech-container">
     @for (technology of project.technologies; track $index) {
-    <p><span>•</span> {{ technology.toLowerCase() }}</p>
+    <p
+      [style.background-color]="hexToRgba(technology.color, 0.1)"
+      [style.color]="technology.color"
+    >
+      <span>•</span> {{ technology.name.toLowerCase() }}
+    </p>
     }
   </div>
 

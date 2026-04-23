@@ -5,6 +5,9 @@ import { FormsModule } from '@angular/forms';
 import { TechnologiesService } from '../../technologies/technologies.service';
 import { ProjectsService } from '../projects.service';
 
+// Model
+import { Technology } from '../../technologies/technology/technology.model';
+
 @Component({
   selector: 'app-new-project',
   standalone: true,
@@ -19,7 +22,7 @@ export class NewProjectComponent {
   enteredDate = '';
   enteredStatus = 'In Progress';
   enteredDescription = '';
-  selectedTechs: string[] = [];
+  selectedTechs: Technology[] = [];
   enteredUrl = '';
 
   constructor(
@@ -38,10 +41,16 @@ export class NewProjectComponent {
   onTechChange(event: Event, techName: string) {
     const checked = (event.target as HTMLInputElement).checked;
 
+    const tech = this.technologiesService
+      .getTechs()
+      .find((t) => t.name === techName);
+
+    if (!tech) return;
+
     if (checked) {
-      this.selectedTechs.push(techName);
+      this.selectedTechs.push(tech);
     } else {
-      this.selectedTechs = this.selectedTechs.filter((t) => t !== techName);
+      this.selectedTechs = this.selectedTechs.filter((t) => t.id !== tech.id);
     }
   }
 
