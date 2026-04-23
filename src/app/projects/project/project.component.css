@@ -41,11 +41,20 @@
 }
 
 .project-description {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-align: justify;
+  line-height: 20px;
   font-size: 14px;
+  font-weight: 300;
   color: var(--secondary-text);
 }
 
 .tech-container {
+  margin-top: 16px;
   display: flex;
   gap: 8px;
 }
