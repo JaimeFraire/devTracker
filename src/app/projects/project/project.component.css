@@ -106,6 +106,34 @@ hr {
   font-weight: 500;
 }
 
+.planning {
+  padding: 2px 8px;
+  background-color: rgba(245, 158, 11, 0.4);
+  color: var(--orange);
+  border-radius: 8px;
+}
+
+.in-progress {
+  padding: 2px 8px;
+  background-color: var(--muted);
+  color: var(--purple);
+  border-radius: 8px;
+}
+
+.completed {
+  padding: 2px 8px;
+  background-color: rgba(16, 185, 129, 0.4);
+  color: var(--green);
+  border-radius: 8px;
+}
+
+.paused {
+  padding: 2px 8px;
+  background-color: var(--muted);
+  color: var(--secondary-text);
+  border-radius: 8px;
+}
+
 .status-container p:last-of-type {
   font-size: 14px;
   font-weight: 400;

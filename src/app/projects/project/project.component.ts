@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { DatePipe } from '@angular/common';
+import { DatePipe, NgClass } from '@angular/common';
 
 // Model
 import { Project } from './project.model';
@@ -10,7 +10,7 @@ import { ProjectModalComponent } from '../project-modal/project-modal.component'
 @Component({
   selector: 'app-project',
   standalone: true,
-  imports: [ProjectModalComponent, DatePipe],
+  imports: [ProjectModalComponent, DatePipe, NgClass],
   templateUrl: './project.component.html',
   styleUrl: './project.component.css',
 })

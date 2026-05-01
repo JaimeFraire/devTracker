@@ -30,7 +30,16 @@
   <hr />
 
   <div class="status-container">
-    <p>{{ project.status }}</p>
+    <p
+      [ngClass]="{
+        planning: project.status === 'Planning',
+        'in-progress': project.status === 'In Progress',
+        completed: project.status === 'Completed',
+        paused: project.status === 'Paused'
+      }"
+    >
+      {{ project.status }}
+    </p>
     <p>{{ project.time }}m</p>
   </div>
 </div>
