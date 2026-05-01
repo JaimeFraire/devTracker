@@ -17,9 +17,10 @@ import { Technology } from '../../technologies/technology/technology.model';
 })
 export class NewProjectComponent {
   @Output() cancel = new EventEmitter<void>();
+  today = new Date();
   isClosing = false;
   enteredTitle = '';
-  enteredDate = '';
+  enteredDate: string = new Date().toISOString().split('T')[0];
   enteredStatus = 'In Progress';
   enteredDescription = '';
   selectedTechs: Technology[] = [];
