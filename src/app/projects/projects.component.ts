@@ -28,4 +28,9 @@ export class ProjectsComponent {
   get projectsList() {
     return this.projectsService.getProjects();
   }
+
+  // Suffix for text in filters
+  get suffix() {
+    return this.projectsList.length === 1 ? '' : 's';
+  }
 }
