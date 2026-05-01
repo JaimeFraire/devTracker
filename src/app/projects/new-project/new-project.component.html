@@ -5,7 +5,7 @@
     <button (click)="onCancel()"><i class="fa-solid fa-xmark"></i></button>
   </div>
 
-  <form (ngSubmit)="onAddProject()" #form="ngForm">
+  <form (ngSubmit)="onAddProject()">
     <p>
       <label for="name">Project Name</label>
       <input
@@ -84,7 +84,7 @@
 
     <p class="actions">
       <button type="button" (click)="onCancel()">Cancel</button>
-      <button type="submit" [disabled]="form.invalid">Create Project</button>
+      <button type="submit">Create Project</button>
     </p>
   </form>
 </dialog>

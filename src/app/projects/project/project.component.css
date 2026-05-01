@@ -1,6 +1,8 @@
 .card {
   min-height: 270px;
   padding: 24px;
+  display: flex;
+  flex-direction: column;
   background-color: var(--card-bg);
   border: 1px solid var(--border);
   border-radius: 8px;
@@ -91,7 +93,7 @@
 hr {
   height: 1.1px;
   margin: 20px 0;
-  top: 20px;
+  margin-top: auto;
   border: 0;
   background-color: var(--border);
 }
